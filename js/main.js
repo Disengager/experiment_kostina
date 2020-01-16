@@ -28,6 +28,16 @@ var test = {
         this.timer_status = false;
         return this.time;
     },
+    sadness: function() {
+        $('#questions').html('<div style="text-align: center;"><img style="display: inline-block;" src="you-gotta-do.jpg" alt="держись"></div>');
+        $('#test .module').css("display", "block");
+        $('#progress__table .module__content').html('');
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#test").offset().top
+        }, 1100);
+        addFlexScroll();
+        
+    },
     start: function() {
       $([document.documentElement, document.body]).animate({
             scrollTop: $("#test").offset().top
