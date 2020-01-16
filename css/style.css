@@ -37,6 +37,8 @@ header .block {
     display: flex;
     justify-content: center;
     padding: 40px 0 10px 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 #filter {
@@ -58,6 +60,11 @@ header .block {
     background-color: #ffffff;
     color: #353535;
 }
+
+.blue-btn {
+    background-color: #8bbbe8;
+}
+
 
 .green-btn:hover {
     background-color: #eaeaea;
