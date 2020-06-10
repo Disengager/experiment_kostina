@@ -99,18 +99,13 @@ function findGetParameter(parameterName) {
 
 function readTestFile(file)
 {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", 'tests/' + file + '.txt', false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                test_creater.create(allText);
+     $("#lesen").click(function() {
+        $.ajax({
+            url : 'tests/' + file + '.txt',
+            dataType: "text",
+            success : function (data) {
+                test_creater.create(data);
             }
-        }
-    }
-    rawFile.send(null);
+        });
+    });
 }
