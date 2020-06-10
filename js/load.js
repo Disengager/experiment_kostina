@@ -101,10 +101,11 @@ function readTestFile(file)
 {
      $("#lesen").click(function() {
         $.ajax({
-            url : 'tests/' + file + '.txt',
+            url : '/tests/' + file + '.txt',
             dataType: "text",
             success : function (data) {
                 test_creater.create(data);
+                console.log(data);
             }
         });
     });
