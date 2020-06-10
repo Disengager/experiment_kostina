@@ -19,6 +19,10 @@
 				<div class="module__title">Настройки теста</div>
 				<div class="module__content">
 					<div id="test-config">
+						<label for="file-upload" class="custom-file-upload">
+						    <i class="fa fa-cloud-upload"></i> Загрузить тест
+						</label><br>
+						<input id="file-upload" type="file" onchange="test.upload_from_file()"/><br>
 						<label for="question-text">Вопросы</label> <br>
 						<textarea rows="10" cols="90" type="memo" id="question-text" onchange="saveMemo();"></textarea> <br>
 						
