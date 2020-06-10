@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+    if(findGetParameter('type') == 'load_test') 
+        if(findGetParameter('test') != null) {
+            readTestFile(findGetParameter('test'))                
+        }
     var questionText = localStorage.getItem('question-text');
     $('#filter #question-text').val(questionText);
 
@@ -78,3 +82,35 @@ $( document ).ready(function() {
         return text_forms[2];
     }
 });
+
+
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+
+function readTestFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", 'tests/' + file + '.txt', false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                test_creater.create(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}

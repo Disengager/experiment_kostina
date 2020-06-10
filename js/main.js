@@ -1,3 +1,36 @@
+var test_creater = {
+    
+    tag_question_start: '<questions>',
+    tag_question_end: '</questions>',
+    tag_count_start: '<count>',
+    tag_count_end: '</count>',
+    tag_separator_start: '<separator>',
+    tag_separator_end: '</separator>',
+    tag_right_start: '<right_answer>',
+    tag_right_end: '</right_answer>',
+    question_id: 'question-text',
+    count_id: 'question-count',
+    separate_id: 'question-separate',
+    right_id: 'right-marker',
+
+    create: function(text) {
+        this.set_field(this.question_id, this.custom_split(text, this.tag_question_start, this.tag_question_end));
+        this.set_field(this.count_id, this.custom_split(text, this.tag_count_start, this.tag_count_end));
+        this.set_field(this.separate_id, this.custom_split(text, this.tag_separator_start, this.tag_separator_end));
+        this.set_field(this.right_id, this.custom_split(text, this.tag_right_start, this.tag_right_end));
+    },
+    custom_split: function(text, tag1, tag2) {
+        var area = text.split(tag1)
+        if(text.length < 2) 
+            return ''
+        area = area[1].split(tag2)[0]
+        return area
+    },
+    set_field: function(id, text) {
+        $('#' + id).val(text);
+    }
+}
+
 var test = {
     time: 0,
     filter: {
@@ -19,6 +52,33 @@ var test = {
         }
     },
     timer_status: false,
+    upload_from_file: function() {
+        if (typeof window.FileReader !== 'function') {
+            alert("The file API isn't supported on this browser yet.");
+            return;
+        }
+        input = document.getElementById('file-upload');
+        if (!input) {
+            alert("Um, couldn't find the imgfile element.");
+        }
+        else if (!input.files) {
+            alert("This browser doesn't seem to support the `files` property of file inputs.");
+        }
+        else if (!input.files[0]) {
+            alert("Please select a file before clicking 'Load'");
+        }
+        else {
+            var file = input.files[0],
+                fs = new window.FileReader();
+            fs.readAsText(file)
+            fs.onload = function() {
+                // console.log(fs.result);    
+                test_creater.create(fs.result);
+            }
+            
+        }
+        
+    },
     timer_enable: function() {
         this.timer_status = true;
         this.time = 0;
@@ -206,3 +266,4 @@ var test = {
     },
 
 }
+
