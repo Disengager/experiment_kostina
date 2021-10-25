@@ -1,79 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Тесты</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2">
-	<script src="js/jquery-3.4.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Experiment</title>
+  <!-- viewport setup -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- lab.js library and experiment code -->
+  <!-- lab.js library code -->
+  <script src="lib/lab.js" data-labjs-script="library"></script>
+  <script src="lib/lab.fallback.js" data-labjs-script="fallback"></script>
+  <link rel="stylesheet" href="lib/lab.css">
+  <!-- study code and styles -->
+  <script src="script.js" defer="true"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<div class="block">
-			<div class="module">
-				<div class="module__title">ДАВАЙ ПОДГОТОВИМСЯ ВМЕСТЕ</div>
-			</div>
-		</div>
-	</header>
-	<div class="wrap">
-		<div class="block" id="filter">
-			<div class="module">
-				<div class="module__title">Настройки теста</div>
-				<div class="module__content">
-					<div id="test-config">
-						<label for="file-upload" class="custom-file-upload">
-						    <i class="fa fa-cloud-upload"></i> Загрузить тест
-						</label><br>
-						<input id="file-upload" type="file" onchange="test.upload_from_file()"/><br>
-						<label for="question-text">Вопросы</label> <br>
-						<textarea rows="10" cols="90" type="memo" id="question-text" onchange="saveMemo();"></textarea> <br>
-						
-						<label for="question-count">Количество вопросов</label> <br>
-						<input type="number" id="question-count" min="1" max="1000"  value="6"> <br>
-						
-						<label for="question-separate">Разделитель вопросов</label> <br>
-						<input type="text" id="question-separate" value="====="> <br>
-
-						<label for="right-marker">Первый символ в правильном ответе(например *)</label> <br>
-						<input type="text" id="right-marker" value="*"> <br>
-						<br><br>Показывать в выводах: <br><br>
-						<input type="checkbox" id="show-persent"><label for="show-persent">Cсоотношение правильных и не правильных ответов</label> <br>
-						<input type="checkbox" id="show-random"><label for="show-random">Вопросы в случайном порядке</label> <br>
-						<input type="checkbox" id="show-right-response"><label for="show-right-response">Правельный ответ сразу</label><br>
-						<input type="checkbox" id="show-countdown"><label for="show-countdown">Время за которое пройден тест</label><br>
-						<input type="checkbox" id="show-progress"><label for="show-progress">Количество ответов</label><br>
-					</div>
-					<div class="module__buttons">
-						<div class="blue-btn btn" onclick="test.sadness()">Если тебе грустно</div><br>
-						<div class="green-btn btn" onclick="test.start()">Начать тест</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="block" id="progress" style="display: none;">
-			<div class="module" id="progress__bar">
-				<div class="module__title">выполнено: <span>0/0</span></div>
-				<div class="module__content"> </div>
-			</div>
-			<div class="module" id="progress__table">
-				<div class="module__content"></div>
-			</div>
-		</div>
-		<div class="block" id="test">
-			<div class="module" style="display: none;">
-				<div class="module__title">Тест</div>
-				<div class="module__content">
-					<div id="questions"></div>
-					<div id="stat"></div>
-					<div class="module__buttons">
-						<div class="red-btn btn" onclick="test.stop()">Завершить тест</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer></footer>
+  <!-- If you'd rather have a container with a fixed width
+       and variable height, try removing the fullscreen class below -->
+  <div class="container fullscreen" data-labjs-section="main">
+    <main class="content-vertical-center content-horizontal-center">
+      <div>
+        <h2>Loading Experiment</h2>
+        <p>The experiment is loading and should start in a few seconds</p>
+      </div>
+    </main>
+  </div>
 </body>
-	<script type="text/javascript" src="js/main.js?v=2"></script>
-	<script type="text/javascript" src="js/load.js"></script>
-	<script type="text/javascript" src="js/spliter.js"></script>
-	<script type="text/javascript" src="js/result.js"></script>
 </html>
