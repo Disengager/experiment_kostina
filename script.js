@@ -58,6 +58,198 @@ const study = lab.util.fromObject({
         {
           "word": "фиолетовый",
           "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "фиолетовый",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
+        },
+        {
+          "word": "purple",
+          "color": "purple"
         }
       ],
       "sample": {
@@ -169,7 +361,6 @@ const study = lab.util.fromObject({
         "end": function anonymous(
 ) {
 alert('this is the end')
-
 }
       },
       "title": "thx",
