@@ -3771,7 +3771,27 @@ var Store = /*#__PURE__*/function (_EventHandler) {
       });
     } // Extract a participant id -----------------------------
 
-  }, {
+  },  {
+    key: "exportFile",
+    value: function exportFile() {
+      var filetype = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'csv';
+      // Assemble the text representation
+      // of the current data
+      var text = '';
+
+      if (filetype === 'json') {
+        text = this.exportJson();
+      } else {
+        text = this.exportCsv();
+      } // Convert the so encoded data to a blob object
+
+
+      return new Blob([text], {
+        type: 'text/csv'
+      });
+    } // Extract a participant id -----------------------------
+
+  },   {
     key: "id",
     get: function get() {
       // Check whether any of the standard participant id columns
@@ -3882,7 +3902,7 @@ var Store = /*#__PURE__*/function (_EventHandler) {
         method: 'post',
         headers: _objectSpread(_objectSpread({}, defaultHeaders), customHeaders),
         body: body,
-        credentials: 'include',
+        //credentials: 'include',
         retry: _objectSpread({
           times: incremental ? 2 : 3
         }, retry)
@@ -5366,16 +5386,28 @@ var Download = /*#__PURE__*/function () {
 
         this.el = document.createElement('div');
         this.el.className = 'popover';
-        alert('я переирал вас 3');
+        console.log()
+        var xmlhttp = new XMLHttpRequest(),   // new HttpRequest instance 
+            theUrl = "https://experiments-server.herokuapp.com/ajax/",
+            file = context.options.datastore.exportCsv(),
+            formData = new FormData(),
+            biography_data = false;
 
-        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        var theUrl = "https://experiments-server.herokuapp.com/ajax/";
+        for(var i = 0; i < context.options.datastore['data'].length; i++) 
+          if(context.options.datastore['data'][i]['sender'] == 'biography')
+            biography_data = context.options.datastore['data'][i];
+
+        //formData.append("experiment-data", file,);
+        if(biography_data)
+          formData.append("biography", JSON.stringify(biography_data))
+
         xmlhttp.open("POST", theUrl, true);
-        xmlhttp.send(JSON.stringify(context.options.datastore['data']));
-
+        xmlhttp.send(formData);
+        console.log('new version');
+        //context.options.datastore.transmit(theUrl); 
         this.el.innerHTML = "\n        <div class=\"alert text-center\">\n          <strong>Download data</strong>\n        </div>\n      ";
         this.el.addEventListener('click', function () {
-          context.options.datastore.download(_this.fileType, context.options.datastore.makeFilename(_this.filePrefix, _this.fileType));
+          context.options.datastore.download(_this.fileType, context.options.datastore.makeFilename());
           window.removeEventListener('beforeunload', unloadHandler);
         });
         context.options.el.prepend(this.el);
