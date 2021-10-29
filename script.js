@@ -45,6 +45,44 @@ const study = lab.util.fromObject({
       "title": "manual"
     },
     {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "required": true,
+          "type": "input",
+          "label": "Ваше имя",
+          "name": "name"
+        },
+        {
+          "required": true,
+          "type": "input",
+          "label": "Ваш возраст",
+          "attributes": {
+            "type": "number",
+            "min": "1",
+            "max": "100"
+          },
+          "name": "age"
+        },
+        {
+          "required": true,
+          "type": "input",
+          "label": "Код для прохождения эксперимента",
+          "name": "IC"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Продолжить",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "biography"
+    },
+    {
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
@@ -57,198 +95,6 @@ const study = lab.util.fromObject({
         },
         {
           "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "фиолетовый",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
-          "color": "purple"
-        },
-        {
-          "word": "purple",
           "color": "purple"
         }
       ],
